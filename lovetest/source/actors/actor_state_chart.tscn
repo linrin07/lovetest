@@ -1,0 +1,62 @@
+[gd_scene load_steps=5 format=3 uid="uid://bonrfs4o2cbqq"]
+
+[ext_resource type="Script" path="res://addons/godot_state_charts/state_chart.gd" id="1_idnvm"]
+[ext_resource type="Script" path="res://addons/godot_state_charts/compound_state.gd" id="2_ncb25"]
+[ext_resource type="Script" path="res://addons/godot_state_charts/atomic_state.gd" id="3_ohxdl"]
+[ext_resource type="Script" path="res://addons/godot_state_charts/transition.gd" id="4_g84tv"]
+
+[node name="StateChart" type="Node"]
+script = ExtResource("1_idnvm")
+
+[node name="Root" type="Node" parent="."]
+script = ExtResource("2_ncb25")
+initial_state = NodePath("Move")
+
+[node name="Move" type="Node" parent="Root"]
+script = ExtResource("2_ncb25")
+initial_state = NodePath("Idle")
+
+[node name="Idle" type="Node" parent="Root/Move"]
+script = ExtResource("3_ohxdl")
+
+[node name="Run" type="Node" parent="Root/Move"]
+script = ExtResource("3_ohxdl")
+
+[node name="Sit" type="Node" parent="Root"]
+script = ExtResource("2_ncb25")
+initial_state = NodePath("SitIdle")
+
+[node name="SitIdle" type="Node" parent="Root/Sit"]
+script = ExtResource("3_ohxdl")
+
+[node name="pluck_petal" type="Node" parent="Root/Sit/SitIdle"]
+script = ExtResource("4_g84tv")
+to = NodePath("../../Pluck")
+event = &"pluck_petal"
+delay_in_seconds = "0.0"
+
+[node name="to_win" type="Node" parent="Root/Sit/SitIdle"]
+script = ExtResource("4_g84tv")
+to = NodePath("../../Win")
+event = &"to_win"
+delay_in_seconds = "0.0"
+
+[node name="to_lose" type="Node" parent="Root/Sit/SitIdle"]
+script = ExtResource("4_g84tv")
+to = NodePath("../../Lose")
+event = &"to_lose"
+delay_in_seconds = "0.0"
+
+[node name="Pluck" type="Node" parent="Root/Sit"]
+script = ExtResource("3_ohxdl")
+
+[node name="plucked_petal" type="Node" parent="Root/Sit/Pluck"]
+script = ExtResource("4_g84tv")
+to = NodePath("../../SitIdle")
+delay_in_seconds = "1.0"
+
+[node name="Win" type="Node" parent="Root/Sit"]
+script = ExtResource("3_ohxdl")
+
+[node name="Lose" type="Node" parent="Root/Sit"]
+script = ExtResource("3_ohxdl")

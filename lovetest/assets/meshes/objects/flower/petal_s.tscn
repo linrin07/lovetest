@@ -1,0 +1,82 @@
+[gd_scene load_steps=11 format=4 uid="uid://4taajdqq6tc4"]
+
+[ext_resource type="Texture2D" uid="uid://cgwijexci3udx" path="res://assets/textures/objects/flower/flower.png" id="1_mgsly"]
+[ext_resource type="Shader" path="res://source/shaders/outline_shader.gdshader" id="2_wof0m"]
+[ext_resource type="Shader" path="res://source/shaders/toon_shader.gdshader" id="3_4oy0q"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4rlh5"]
+resource_name = "flower"
+albedo_texture = ExtResource("1_mgsly")
+roughness = 0.8
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_srjip"]
+_surfaces = [{
+"aabb": AABB(-0.0190801, -0.00750949, -0.109755, 0.0381602, 0.00750949, 0.0787427),
+"format": 34359742465,
+"index_count": 132,
+"index_data": PackedByteArray("BQACAAsABQAEAAIACwAGAAcACwACAAYAAwAKAAEAAwAIAAoAAAAIAAMAAAAJAAgACAAHAAoACAALAAcACQALAAgACQAFAAsAEQAOABAAEQAXAA4AFwASAA4AFwATABIADwAWABQADwANABYADAAUABUADAAPABQAFAATABcAFAAWABMAFQAXABEAFQAUABcAAQAPAAMAAQANAA8AAwAMAAAAAwAPAAwAAgASAAYAAgAOABIAAAAVAAkAAAAMABUABwAWAAoABwATABYABgATAAcABgASABMABAAOAAIABAAQAA4ABQAQAAQABQARABAACQARAAUACQAVABEACgANAAEACgAWAA0A"),
+"lods": [0.00403637, PackedByteArray("BQAEAAIACQAFAAIACQACAAoAAAAJAAoAAAAKAAMACgACAAcAAgAGAAcADgATABIAFgATAA4AFQAWAA4AFQAOABEADAAWABUADAAPABYADwANABYAAwANAA8AAwAPAAwACgANAAMAAwAMAAAACgAWAA0AAAAMABUABwAWAAoAAAAVAAkABwATABYACQAVABEABgATAAcACQARAAUABgASABMABQARAAQAAgASAAYABAARAA4AAgAOABIABAAOAAIA"), 0.0128784, PackedByteArray("AwAFAAoABQACAAoACgACAAcADAAPABYADAAWAA4ADAAOABEAAwAWAA8AAwAPAAwACgAWAAMAAwAMAAUABwAWAAoABQAMABEABwAOABYABQARAAIAAgAOAAcAAgARAA4A"), 0.0139578, PackedByteArray("AwACAAcADAAWAA4AAwAWAAwABwAWAAMAAwAMAAIABwAOABYAAgAMAA4AAgAOAAcA"), 0.0153604, PackedByteArray("AwAOAAwAAgAMAA4AAwAMAAIAAgAOAAMA")],
+"name": "flower",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("/HnJuwAAAAAtPz69/HnJOwAAAAAtPz69AAAAAAAAAACHvt+9AAAAAAAAAACAGQC9zbwmvAAAAAACPNm9p0GXvAAAAACfRbu9zbwmPAAAAAACPNm9p0GXPAAAAACfRbu9AAAAAF6vBrtkaIy9JqBJvAAAAAB624e9JqBJPAAAAAB624e9AAAAAOSIIbuTZbu9imThuxfeobuQMj29imThOxfeobuQMj29AAAAAEHGo7tmx+C9AAAAAEhkpbsTDv68g6UuvHU/ortoQtq9102cvA/poruukru9g6UuPHU/ortoQtq9102cPA/poruukru9AAAAAEzS6LuzA4y9mnhVvF0CorsOd4e9mnhVPF0CorsOd4e9AAAAACES9rv+xru9")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_uwibg"]
+resource_name = "godette_export_Plane_003"
+_surfaces = [{
+"aabb": AABB(-0.0190801, -0.00750949, -0.109755, 0.0381602, 0.00750949, 0.0787427),
+"attribute_data": PackedByteArray("stsdPyhlyT6y2x0/KGXJPk52LD8oZck+TnYsPyhlyT7/KCU/4OfQPf8oJT/g59A9/yglP9Ru7T7/KCU/1G7tPv8SGT/gGu89/xIZP+Aa7z2KOw8//Aw9Poo7Dz/8DD0+/z4xP+Aa7z3/PjE/4BrvPXQWOz/8DD0+dBY7P/wMPT7/KCU/XOCUPp6LFj9cJ5o+nosWP1wnmj5gxjM/XCeaPmDGMz9cJ5o+/yglP9jCPD6y2x0/KGXJPrLbHT8oZck+TnYsPyhlyT5Odiw/KGXJPv8oJT/g59A9/yglP+Dn0D3/KCU/1G7tPv8oJT/Ubu0+/xIZP+Aa7z3/Ehk/4BrvPYo7Dz/8DD0+ijsPP/wMPT7/PjE/4BrvPf8+MT/gGu89dBY7P/wMPT50Fjs//Aw9Pv8oJT9c4JQ+nosWP1wnmj6eixY/XCeaPmDGMz9cJ5o+YMYzP1wnmj7/KCU/2MI8Pg=="),
+"format": 34359742487,
+"index_count": 132,
+"index_data": PackedByteArray("CgAFABUACgAIAAUAFQANAA8AFQAFAA0ABwAUAAMABwAQABQAAAAQAAcAAAARABAAEAAPABQAEAAVAA8AEQAVABAAEQAKABUAIAAbAB4AIAArABsAKwAiABsAKwAkACIAHQApACYAHQAYACkAFgAmACcAFgAdACYAJgAkACsAJgApACQAJwArACAAJwAmACsAAgAcAAYAAgAZABwABgAXAAEABgAcABcABAAjAAwABAAaACMAAQAoABIAAQAXACgADgAqABMADgAlACoADAAlAA4ADAAjACUACQAaAAQACQAfABoACwAfAAkACwAhAB8AEgAhAAsAEgAoACEAEwAZAAIAEwAqABkA"),
+"lods": [0.00403637, PackedByteArray("CgAIAAUAEQAKAAUAEQAFABQAAAARABQAAAAUAAcAFAAFAA8ABQANAA8AGwAkACIAKQAkABsAJwApABsAJwAbACAAFgApACcAFgAdACkAHQAYACkABgAZABwABgAcABcAEwAZAAYABgAXAAEAEwAqABkAAQAXACgADgAqABMAAQAoABIADgAlACoAEgAoACEADAAlAA4AEgAhAAsADAAjACUACwAhAAkABAAjAAwACQAhABoABAAaACMACQAaAAQA"), 0.0128784, PackedByteArray("BwAKABQACgAFABQAFAAFAA8AFgAdACkAFgApABsAFgAbACAABgAqABwABgAcABcAEwAqAAYABgAXAAsADgAqABMACwAXACEADgAaACoACwAhAAQABAAaAA4ABAAhABoA"), 0.0139578, PackedByteArray("BwAFAA8AFgApABsABgAqABcADgAqAAYABgAXAAQADgAaACoABAAXABoABAAaAA4A"), 0.0153604, PackedByteArray("BgAaABcABAAXABoABgAXAAQABAAaAAYA")],
+"material": SubResource("StandardMaterial3D_4rlh5"),
+"name": "flower",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 44,
+"vertex_data": PackedByteArray("/HnJuwAAAAAtPz69/HnJuwAAAAAtPz69/HnJOwAAAAAtPz69/HnJOwAAAAAtPz69AAAAAAAAAACHvt+9AAAAAAAAAACHvt+9AAAAAAAAAACAGQC9AAAAAAAAAACAGQC9zbwmvAAAAAACPNm9zbwmvAAAAAACPNm9p0GXvAAAAACfRbu9p0GXvAAAAACfRbu9zbwmPAAAAAACPNm9zbwmPAAAAAACPNm9p0GXPAAAAACfRbu9p0GXPAAAAACfRbu9AAAAAF6vBrtkaIy9JqBJvAAAAAB624e9JqBJvAAAAAB624e9JqBJPAAAAAB624e9JqBJPAAAAAB624e9AAAAAOSIIbuTZbu9imThuxfeobuQMj29imThuxfeobuQMj29imThOxfeobuQMj29imThOxfeobuQMj29AAAAAEHGo7tmx+C9AAAAAEHGo7tmx+C9AAAAAEhkpbsTDv68AAAAAEhkpbsTDv68g6UuvHU/ortoQtq9g6UuvHU/ortoQtq9102cvA/poruukru9102cvA/poruukru9g6UuPHU/ortoQtq9g6UuPHU/ortoQtq9102cPA/poruukru9102cPA/poruukru9AAAAAEzS6LuzA4y9mnhVvF0CorsOd4e9mnhVvF0CorsOd4e9mnhVPF0CorsOd4e9mnhVPF0CorsOd4e9AAAAACES9rv+xru9S5U68Hzvw7d+KgCL////P4DVAIv///8/s2o68IjvQMi08v//////P/9/PfT///+//38/l////z9Phv//////v2eKy+qn9EG6vwr2y////z+/jfju2fHxuCsO1Zv///8/P/X2y////z+Xdcvqg/SrxdPx1Zv///8/P3L47uLxEcevhP//////v/qTM/Cr79G3EiZZjf///z/s2VmN////PwRsM/Ci7yjI/39z+////789cEkVjO9YSH4qAIv///8/wY9JFUzvxjeA1QCL////P7Ty//////8/zosAAP///z//fz+X////P/9/Twb///8/r2p4Cn30t0XACqLL////P+5uwQ3n8SRHHQ5MnP///z9PlXgKj/Q+Oj71osv///8/EJHBDbXx8zjh8Uyc////P/9/rQT///8/OnDvE6jvJUgQJlmN////P8SP7xOz79Q37tlZjf///z+ahAAA////Pw==")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_srjip")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jv8op"]
+render_priority = 0
+shader = ExtResource("2_wof0m")
+shader_parameter/albedo_color = Color(0.124476, 0.14195, 0.485451, 1)
+shader_parameter/outline_width = 2.0
+shader_parameter/alpha_threshold = 0.5
+shader_parameter/light_direction = Vector3(0, -1, 0)
+
+[sub_resource type="Gradient" id="Gradient_gfj43"]
+offsets = PackedFloat32Array(0, 0.0913979, 0.120968, 0.473118, 0.5, 0.540323, 0.782258)
+colors = PackedColorArray(0.194052, 0.194452, 0.304387, 1, 0.186279, 0.290807, 0.368761, 1, 0.230481, 0.208066, 0.261519, 1, 0.477943, 0.447253, 0.423958, 1, 0.726727, 0.689522, 0.694133, 1, 0.88692, 0.856184, 0.814159, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_fi07d"]
+gradient = SubResource("Gradient_gfj43")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mwese"]
+render_priority = 0
+next_pass = SubResource("ShaderMaterial_jv8op")
+shader = ExtResource("3_4oy0q")
+shader_parameter/rim = 0.5
+shader_parameter/rim_threshold = 0.9
+shader_parameter/emission = 0.0
+shader_parameter/metallic = 0.0
+shader_parameter/specular = 0.5
+shader_parameter/specular_color = Color(0.5, 0.5, 0.5, 1)
+shader_parameter/roughness = 0.8
+shader_parameter/is_normal_symmetric = false
+shader_parameter/normal_scale = 1.0
+shader_parameter/albedo_color = Color(1, 1, 1, 1)
+shader_parameter/albedo_color2 = Color(0, 0, 0, 1)
+shader_parameter/diffuse_map = ExtResource("1_mgsly")
+shader_parameter/ramp = SubResource("GradientTexture1D_fi07d")
+
+[node name="petal_s" type="MeshInstance3D"]
+mesh = SubResource("ArrayMesh_uwibg")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("ShaderMaterial_mwese")
